@@ -14,8 +14,9 @@ Write a program that takes the speed of a car as input e.g 80. If the speed is l
 Challenge 3: Net Salary Calculator (Toy Problem)
 
 Write a program whose major task is to calculate an individual’s Net Salary by getting the inputs of basic salary and benefits. Calculate the payee (i.e. Tax), NHIF Deductions, NSSF Deductions, gross salary, and net salary. 
-Up to 24,000 | 10.0
-24,001 - 32,333	| 25.0
-32,334 - 500,000 | 30.0
-500,001 - 800,000 | 32.5
-Above 800,000| 35.0
+|Monthly Taxable Pay | Rate of Tax (%)|
+| --- | --- |
+|Up to 24,000 | 10.0|
+|32,334 - 500,000 | 30.0|
+|500,001 - 800,000 | 32.5|
+|Above 800,000| 35.0|
