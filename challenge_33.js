@@ -1,7 +1,6 @@
-function calculateGrossSalary(basicSalary, benefits) {
-    return basicSalary + benefits;
-}
-function calculatePayee(grossSalary) {
+function netSalaryCalculation(basicSalary, benefits) {
+    const grossSalary = basicSalary + benefits;
+    //calculate payeeTax
     let payee;
     if (grossSalary <= 24000) {
         payee = grossSalary * 0.1;
@@ -18,9 +17,8 @@ function calculatePayee(grossSalary) {
     else {
         payee = grossSalary * 0.35;
     }
-    return payee;
-}
-function nhifDeductions(grossSalary) {
+
+    //calculate NHIF deductions
     let nhif;
     if (grossSalary <= 5_999) {
         nhif = 150;
@@ -73,27 +71,12 @@ function nhifDeductions(grossSalary) {
     else {
         nhif = 1700;
     }
-    return nhif;
+
+    //calculate NSSF
+    const nssf = grossSalary * 0.06
+
+    //calculate Net Salary
+    const netSalary = grossSalary - payee - nhif - nssf;
+    return `Gross salary: KES ${grossSalary}\nPayee: KES ${payee}\nNHIF: KES ${nhif}\nNSSF: KES ${nssf}\nNet salary: KES ${netSalary}`;
 }
-function nssfDeductions(grossSalary) {
-    return grossSalary * 0.06
-}
-function calculateNetSalary(grossSalary, payee, nhif, nssf) {
-    return grossSalary - payee - nhif - nssf;
-}
-function displayCalculation(grossSalary, payee, nhif, nssf, netSalary) {
-    console.log(`Gross Salary:KES ${grossSalary}`);
-    console.log(`Payee:KES ${payee}`);
-    console.log(`NHIF:KES ${nhif}`);
-    console.log(`NSSF:KES ${nssf}`);
-    console.log(`Net Salary:KES ${netSalary}`);
-}
-function netSalary(basicSalary, benefits) {
-    const grossSalary = calculateGrossSalary(basicSalary, benefits);
-    const payee = calculatePayee(grossSalary);
-    const nhif = nhifDeductions(grossSalary);
-    const nssf = nssfDeductions(grossSalary);
-    const netSalary = calculateNetSalary(grossSalary, payee, nhif, nssf)
-    displayCalculation(grossSalary, payee, nhif, nssf, netSalary);
-}
-netSalary(81000, 20000);
+console.log(netSalaryCalculation(81000, 20000));
