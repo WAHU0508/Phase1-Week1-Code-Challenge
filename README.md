@@ -1,3 +1,4 @@
+# WEEK1 CODE CHALLENGE
 ## Challenge 1: Student Grade Generator (Toy Problem)
 
 Write a function that prompts the user to input student marks. The input should be between 0 and 100. The output should correspond the correct grade, as shown below: 
@@ -37,12 +38,15 @@ Write a program whose major task is to calculate an individual’s Net Salary by
 ### NSSF DEDUCTIONS
 The employer and employee each contribute 6% of pensionable pay
 
-### CODE FILES
+### CODE CHALLENGE FILES
 The file description:
 * The file [challenge1](./challenge_1.js) entails challenge 1 code.
 * The file [challenge2](./challenge_2.js) entails challenge 2 code.
 * The file [challenge3](./challenge_3.js) entails challenge 3 code.
 * The file [challenge4](./challenge_33.js) entails a different version of the challenge 3 code.
+
+
+
 
 
 
